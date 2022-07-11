@@ -3,9 +3,16 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "docker": "docker compose up -d",
+    "docker:dev": "docker exec app npm run dev",
+    "docker:build": "docker exec app npm run build",
+    "docker:start": "docker exec app npm run start",
+    "docker:stop": "docker exec app npm run stop",
+    "docker:lint": "docker exec app npm run lint",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "stop": "fuser -k 3000/tcp",
     "lint": "next lint",
     "postinstall": "prisma generate"
   },

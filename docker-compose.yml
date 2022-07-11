@@ -1,6 +1,7 @@
 version: "3.9"
 services:
   app:
+    container_name: app
     build: .
     ports:
       - "8003:3000"
@@ -9,6 +10,7 @@ services:
     depends_on:
       - db
   db:
+    container_name: db
     image: postgres:14.4
     ports:
       - "8004:5432"

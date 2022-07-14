@@ -21,7 +21,7 @@ export default function Document() {
   return (
     <Html className={wrapperClassName} data-theme="business">
       <Head />
-      <body className={`container mx-auto`}>
+      <body className={`container mx-auto min-h-screen`}>
         <Main />
         <NextScript />
       </body>

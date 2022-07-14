@@ -1,10 +1,10 @@
 import type { NextPage } from "next";
 import Head from "next/head";
+import { BlogForm } from "../../components/forms/BlogForm";
 import { trpc } from "../../utils/trpc";
 
 const Home: NextPage = () => {
-  const hello = trpc.useQuery(["example.hello", { text: "from tRPC" }]);
-
+  const blogs = trpc.useQuery(["blog.getAll"]);
   return (
     <div className="m-4">
       <Head>
@@ -13,7 +13,16 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div>{hello.data ? <p>{hello.data.greeting}</p> : <p>Loading..</p>}</div>
+      <BlogForm />
+      <div className="mt-4">
+        {blogs.data?.map((blog) => (
+          <div key={blog.id}>
+            <h2>{blog.title}</h2>
+            <p>{blog.content}</p>
+            <hr />
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

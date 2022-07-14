@@ -6,5 +6,8 @@ echo "Waiting for DB"
 echo "Installing"
 pnpm install
 
+echo "Running Prisma Studio Client"
+pnpm run prisma-studio &
+
 echo "Running Dev Server"
 pnpm run dev

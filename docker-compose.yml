@@ -5,6 +5,7 @@ services:
     build: .
     ports:
       - "8003:3000"
+      - "5004:5555"
     volumes:
       - .:/app
     depends_on:

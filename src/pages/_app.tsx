@@ -4,43 +4,32 @@ import type { AppType } from "next/dist/shared/lib/utils";
 import superjson from "superjson";
 import { SessionProvider } from "next-auth/react";
 import "../styles/globals.css";
-import { SiteWrapper } from "../components/layouts/SiteWrapper";
 import { NavBar } from "../components/elements/NavBar";
-import { DarkModeToggle } from "../components/elements/DarkModeToggle";
 import { NavBarItem } from "../components/elements/NavBarItem";
-import { NavBarItemContainer } from "../components/elements/NavBarItemContainer";
 import { ProfileIcon } from "../components/elements/ProfileIcon";
 import { Logo } from "../components/elements/Logo";
+import { DarkModeToggle } from "../components/elements/DarkModeToggle";
 
 const MyApp: AppType = ({
   Component,
   pageProps: { session, ...pageProps },
 }) => {
-  const navigation = (
-    <NavBar key={"navigation"}>
-      <Logo />
-      <DarkModeToggle />
-      <NavBarItemContainer
-        endContent={
-          <div className="hidden lg:block">
-            <ProfileIcon />
-          </div>
-        }
-      >
-        <NavBarItem title="Home" path="/" />
-        <div className="mt-5 pt-5 border-t lg:hidden">
-          <ProfileIcon />
-        </div>
-      </NavBarItemContainer>
+  const Navigation = () => (
+    <NavBar
+      key={"navigation"}
+      startContent={<Logo />}
+      endContent={<ProfileIcon />}
+    >
+      <NavBarItem title="Blog" path="/" />
+      <NavBarItem title="Projects" path="/" />
     </NavBar>
   );
 
   return (
-    <SiteWrapper navigation={navigation}>
-      <SessionProvider session={session}>
-        <Component {...pageProps} />
-      </SessionProvider>
-    </SiteWrapper>
+    <SessionProvider session={session}>
+      <Navigation />
+      <Component {...pageProps} />
+    </SessionProvider>
   );
 };
 

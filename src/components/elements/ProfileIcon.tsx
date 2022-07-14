@@ -2,12 +2,13 @@ import Image from "next/image";
 
 export const ProfileIcon = () => {
   return (
-    <div className={`relative`}>
-      <div className="flex items-center space-x-4">
-        <button
-          className="w-10 h-10 outline-none rounded-full ring-offset-2 ring-gray-200 ring-2 lg:focus:ring-indigo-600"
-          onClick={() => {}}
-        >
+    <div className="dropdown dropdown-end">
+      <label
+        tabIndex={0}
+        className="btn btn-ghost btn-circle avatar"
+        onClick={() => {}}
+      >
+        <div className="w-10 rounded-full">
           <Image
             alt="profile"
             src="https://randomuser.me/api/portraits/men/46.jpg"
@@ -15,14 +16,25 @@ export const ProfileIcon = () => {
             width={100}
             className="w-full h-full rounded-full"
           />
-        </button>
-        <div className="lg:hidden">
-          <span className="block">John McElreavey</span>
-          <span className="block text-sm text-gray-500">
-            john@mcelreavey.com
-          </span>
         </div>
-      </div>
+      </label>
+      <ul
+        tabIndex={0}
+        className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
+      >
+        <li>
+          <a className="justify-between">
+            Profile
+            <span className="badge">New</span>
+          </a>
+        </li>
+        <li>
+          <a>Settings</a>
+        </li>
+        <li>
+          <a>Logout</a>
+        </li>
+      </ul>
     </div>
   );
 };

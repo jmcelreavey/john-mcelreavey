@@ -10,6 +10,7 @@
     "docker:stop": "docker exec app pnpm run stop",
     "docker:lint": "docker exec app pnpm run lint",
     "docker:add": "docker exec app pnpm add",
+    "docker:remove": "docker exec app pnpm remove",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",

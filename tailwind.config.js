@@ -69,7 +69,6 @@ module.exports = {
     },
   },
   plugins: [require("daisyui")],
-
   daisyui: {
     styled: true,
     themes: true,
@@ -78,6 +77,6 @@ module.exports = {
     logs: true,
     rtl: false,
     prefix: "",
-    darkTheme: "dark",
+    darkTheme: "forest",
   },
 };

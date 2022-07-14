@@ -17,9 +17,9 @@ export const DarkModeToggle = () => {
     <button
       aria-label="Toggle Dark Mode"
       onClick={toggle}
-      className="btn"
+      className="btn btn-sm btn-ghost"
     >
-      <span className="text-white">{themeColorIcon}</span>
+      <span>{themeColorIcon}</span>
     </button>
   );
 };

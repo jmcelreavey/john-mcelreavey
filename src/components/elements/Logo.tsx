@@ -1,14 +1,8 @@
 import Image from "next/image";
 
 export const Logo = () => (
-  <div className="flex-none lg:flex-initial">
-    <a href="javascript:void(0)">
-      <Image
-        src="https://www.floatui.com/logo.svg"
-        width={120}
-        height={50}
-        alt="Float UI logo"
-      />
-    </a>
-  </div>
+  <a className="btn btn-ghost normal-case font-title text-primary inline-flex text-lg transition-all duration-200 md:text-2xl">
+    <span>John</span>&nbsp;
+    <span className="text-base-content">McElreavey</span>
+  </a>
 );

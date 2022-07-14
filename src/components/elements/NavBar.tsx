@@ -10,7 +10,7 @@ export const NavBar = (props: NavBarItemContainerProps) => {
     <div className="navbar bg-base-300 shadow-xl rounded-b-lg">
       <div className="navbar-start">{startContent}</div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal p-0">{children}</ul>
+        <ul className="menu menu-horizontal p-0 space-x-2">{children}</ul>
       </div>
       <div className="navbar-end">
         {endContent}

@@ -19,7 +19,7 @@ export default function Document() {
   }, [isDarkMode, Theme]);
 
   return (
-    <Html className={wrapperClassName} data-theme="garden">
+    <Html className={wrapperClassName} data-theme="business">
       <Head />
       <body className={`container mx-auto`}>
         <Main />

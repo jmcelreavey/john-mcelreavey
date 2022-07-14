@@ -5,13 +5,13 @@ export const ProfileIcon = () => {
     <div className="dropdown dropdown-end">
       <label
         tabIndex={0}
-        className="btn btn-ghost btn-circle avatar"
+        className="btn btn-ghost btn-circle avatar online"
         onClick={() => {}}
       >
-        <div className="w-10 rounded-full">
+        <div className="w-24 rounded-full ring ring-primary">
           <Image
             alt="profile"
-            src="https://randomuser.me/api/portraits/men/46.jpg"
+            src="https://www.gravatar.com/avatar/9b619ae13b9c43165119d9f77bfe0098"
             height={100}
             width={100}
             className="w-full h-full rounded-full"
@@ -23,16 +23,16 @@ export const ProfileIcon = () => {
         className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
       >
         <li>
-          <a className="justify-between">
-            Profile
-            <span className="badge">New</span>
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href="https://www.linkedin.com/in/john-mcelreavey-625a56b0/"
+          >
+            My LinkedIn
           </a>
         </li>
         <li>
-          <a>Settings</a>
-        </li>
-        <li>
-          <a>Logout</a>
+          <a href="mailto: j.mcelreavey@gmail.com">Email Me</a>
         </li>
       </ul>
     </div>

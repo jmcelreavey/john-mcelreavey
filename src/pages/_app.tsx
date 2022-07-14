@@ -8,19 +8,29 @@ import { NavBar } from "../components/elements/NavBar";
 import { NavBarItem } from "../components/elements/NavBarItem";
 import { ProfileIcon } from "../components/elements/ProfileIcon";
 import { Logo } from "../components/elements/Logo";
+import { useRouter } from "next/router";
 
 const MyApp: AppType = ({
   Component,
   pageProps: { session, ...pageProps },
 }) => {
+  const router = useRouter();
   const Navigation = () => (
     <NavBar
       key={"navigation"}
       startContent={<Logo />}
       endContent={<ProfileIcon />}
     >
-      <NavBarItem title="Blog" path="/blog" />
-      <NavBarItem title="Projects" path="/projects" />
+      <NavBarItem
+        selected={router.pathname === "/blog"}
+        title="Blog"
+        path="/blog"
+      />
+      <NavBarItem
+        selected={router.pathname === "/projects"}
+        title="Projects"
+        path="/projects"
+      />
     </NavBar>
   );
 

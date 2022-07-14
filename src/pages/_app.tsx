@@ -8,7 +8,6 @@ import { NavBar } from "../components/elements/NavBar";
 import { NavBarItem } from "../components/elements/NavBarItem";
 import { ProfileIcon } from "../components/elements/ProfileIcon";
 import { Logo } from "../components/elements/Logo";
-import { DarkModeToggle } from "../components/elements/DarkModeToggle";
 
 const MyApp: AppType = ({
   Component,
@@ -20,8 +19,8 @@ const MyApp: AppType = ({
       startContent={<Logo />}
       endContent={<ProfileIcon />}
     >
-      <NavBarItem title="Blog" path="/" />
-      <NavBarItem title="Projects" path="/" />
+      <NavBarItem title="Blog" path="/blog" />
+      <NavBarItem title="Projects" path="/projects" />
     </NavBar>
   );
 

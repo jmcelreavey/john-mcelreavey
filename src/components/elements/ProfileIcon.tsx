@@ -28,7 +28,7 @@ export const ProfileIcon = () => {
             rel="noreferrer"
             href="https://www.linkedin.com/in/john-mcelreavey-625a56b0/"
           >
-            My LinkedIn
+            Nosy @ LinkedIn
           </a>
         </li>
         <li>

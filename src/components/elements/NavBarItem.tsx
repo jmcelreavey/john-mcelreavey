@@ -10,8 +10,8 @@ export const NavBarItem = (props: NavBarItemProps) => {
   const className = selected ? "btn-active" : "";
   return (
     <li>
-      <Link href={path}>
-        <button className={`${className} btn btn-link`}>{title}</button>
+      <Link href={path} passHref>
+        <a className={`${className} btn btn-link`}>{title}</a>
       </Link>
     </li>
   );

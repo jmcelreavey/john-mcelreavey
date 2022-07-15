@@ -52,7 +52,7 @@ export const GuestBookForm = (props: GuestBookFormProps) => {
         placeholder="...?"
         {...register("content")}
       ></textarea>
-      <div>
+      <div className="text-right">
         <button className="btn btn-primary mt-4" type="submit">
           Submit
         </button>

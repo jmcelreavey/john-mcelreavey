@@ -12,7 +12,7 @@ datasource db {
 
 model GuestBook {
   id        String   @id @default(cuid())
-  name      String       @default("Anonymous")
+  name      String?      @default("Anonymous")
   content   String
 
   createdAt DateTime @default(now())

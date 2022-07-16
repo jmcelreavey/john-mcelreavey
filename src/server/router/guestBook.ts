@@ -10,8 +10,12 @@ export const guestBook = createRouter()
   .mutation("createEntry", {
     input: createGuestBookEntrySchema,
     async resolve({ input, ctx }) {
+      const { name, content } = input;
       return await ctx.prisma.guestBook.create({
-        data: input,
+        data: {
+          name,
+          content,
+        },
       });
     },
   });

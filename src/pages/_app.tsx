@@ -10,6 +10,7 @@ import { ProfileIcon } from "../components/elements/ProfileIcon";
 import { Logo } from "../components/elements/Logo";
 import { useRouter } from "next/router";
 import { getBaseUrl } from "../utils/getBaseUrl";
+import "@fontsource/cedarville-cursive";
 
 const MyApp: AppType = ({
   Component,

@@ -23,6 +23,7 @@
     "postinstall": "prisma generate"
   },
   "dependencies": {
+    "@fontsource/cedarville-cursive": "^4.5.8",
     "@hookform/resolvers": "^2.9.5",
     "@next-auth/prisma-adapter": "^1.0.3",
     "@prisma/client": "^4.0.0",

@@ -5,6 +5,9 @@ module.exports = {
   content: ["./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      fontFamily: {
+        "cedarville-cursive": ["Cedarville Cursive", "cursive"],
+      },
       colors: {
         theme: {
           light: "#f0efeb",

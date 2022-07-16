@@ -31,32 +31,40 @@ export const GuestBookForm = (props: GuestBookFormProps) => {
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
-      {error?.message && <p>{error.message}</p>}
-      <h1 className="font-bold underline underline-offset-2">
-        Sign my Guestbook!
-      </h1>
-      <label className="label">
-        <span className="label-text">What&apos;s your name:</span>
-      </label>
-      <input
-        className="input input-bordered w-full"
-        {...register("name")}
-        placeholder="Anonymous"
-      />
-      <label className="label">
-        <span className="label-text">Leave your message below:</span>
-      </label>
-      <textarea
-        className="textarea textarea-bordered w-full"
-        placeholder="...?"
-        {...register("content")}
-      ></textarea>
-      <div className="text-right">
-        <button className="btn btn-primary mt-4" type="submit">
-          Submit
-        </button>
+    <div className="collapse">
+      <input type="checkbox" className="peer" />
+      <div className="collapse-title">
+        <h1 className="font-bold uppercase">
+          <div className="badge badge-primary uppercase">Retro</div>
+          <span className="mx-4">Sign my Guestbook!</span>
+        </h1>
       </div>
-    </form>
+      <div className="collapse-content">
+        <form onSubmit={handleSubmit(onSubmit)}>
+          {error?.message && <p>{error.message}</p>}
+          <label className="label">
+            <span className="label-text">What&apos;s your name:</span>
+          </label>
+          <input
+            className="input input-bordered w-full"
+            {...register("name")}
+            placeholder="Anonymous"
+          />
+          <label className="label">
+            <span className="label-text">Leave your message below:</span>
+          </label>
+          <textarea
+            className="textarea textarea-bordered w-full"
+            placeholder="...?"
+            {...register("content")}
+          ></textarea>
+          <div className="text-right">
+            <button className="btn btn-primary mt-4" type="submit">
+              Submit
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
   );
 };

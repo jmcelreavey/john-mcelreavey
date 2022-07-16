@@ -13,7 +13,7 @@ export const guestBook = createRouter()
       const { name, content } = input;
       return await ctx.prisma.guestBook.create({
         data: {
-          name,
+          name: name && name.length > 0 ? name : undefined,
           content,
         },
       });

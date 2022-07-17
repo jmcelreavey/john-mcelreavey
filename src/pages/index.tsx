@@ -15,7 +15,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className="collapse">
+      <div className="collapse text-sm lg:text-base">
         <input type="checkbox" className="peer" />
         <div className="collapse-title">
           <h1 className="font-bold uppercase">

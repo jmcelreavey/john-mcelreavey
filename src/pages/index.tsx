@@ -15,35 +15,51 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <GuestBookForm onSuccess={refetch} />
+      <div className="collapse">
+        <input type="checkbox" className="peer" />
+        <div className="collapse-title">
+          <h1 className="font-bold uppercase">
+            <div className="badge badge-primary uppercase">Retro Stuff</div>
+            <span className="mx-4">View & Sign my Guestbook!</span>
+          </h1>
+        </div>
 
-      {isLoading && <p>Loading guestbook entries...</p>}
+        <div className="collapse-content">
+          <GuestBookForm onSuccess={refetch} />
 
-      {!isLoading && !data && <p>No guestbook entries found. 🥲</p>}
+          {isLoading && <p>Loading guestbook entries...</p>}
 
-      {!isLoading &&
-        data &&
-        data?.map((guestBook) => (
-          <div
-            className="m-4 bg-neutral shadow-xl card card-side"
-            key={guestBook.id}
-          >
-            <div className="card-body">
-              <div className="flex gap-x-4">
-                <label>Signed:</label>
-                <p className="flex font-cedarville-cursive">{guestBook.name}</p>
-                <div className="flex items-end">
-                  <p>{guestBook.createdAt.toDateString()}</p>
+          {!isLoading && (!data || data?.length === 0) && (
+            <p>No guestbook entries found. 🥲</p>
+          )}
+
+          {!isLoading &&
+            data &&
+            data?.map((guestBook) => (
+              <div
+                className="m-4 bg-neutral shadow-xl card card-side"
+                key={guestBook.id}
+              >
+                <div className="card-body">
+                  <div className="flex gap-x-4">
+                    <label>Signed:</label>
+                    <p className="flex font-cedarville-cursive">
+                      {guestBook.name}
+                    </p>
+                    <div className="flex items-end">
+                      <p>{guestBook.createdAt.toDateString()}</p>
+                    </div>
+                  </div>
+                  <hr />
+                  <div className="flex gap-x-4">
+                    <label>Message:</label>
+                    <p>{guestBook.content}</p>
+                  </div>
                 </div>
               </div>
-              <hr />
-              <div className="flex gap-x-4">
-                <label>Message:</label>
-                <p>{guestBook.content}</p>
-              </div>
-            </div>
-          </div>
-        ))}
+            ))}
+        </div>
+      </div>
     </div>
   );
 };

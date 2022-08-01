@@ -33,7 +33,7 @@ export const GuestBookForm = (props: GuestBookFormProps) => {
   return (
     <div>
       <h1 className="font-bold uppercase">
-        <span>Wanna sign it?</span>
+        <span>Feel free to drop a message</span>
       </h1>
       <form onSubmit={handleSubmit(onSubmit)}>
         {error?.message && <p>{error.message}</p>}

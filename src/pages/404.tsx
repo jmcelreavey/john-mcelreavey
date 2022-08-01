@@ -1,3 +1,4 @@
+import Head from "next/head";
 import { useRouter } from "next/router";
 
 export default function Custom404() {
@@ -5,6 +6,11 @@ export default function Custom404() {
 
   return (
     <div className="justify-center text-center">
+      <Head>
+        <title>404 - Page Not Found</title>
+        <meta name="description" content="This is not the page you are looking for" />
+        <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+      </Head>
       <div className="mt-24 m-auto flex flex-col items-center">
         <svg
           className="emoji-404"

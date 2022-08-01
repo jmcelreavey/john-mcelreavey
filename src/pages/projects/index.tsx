@@ -8,7 +8,7 @@ const Home: NextPage = () => {
       <Head>
         <title>Personal Projects</title>
         <meta name="description" content="John McElreavey's Portfolio" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" type="image/svg+xml" href="favicon.svg" />
       </Head>
 
       <div className="card w-11/12 lg:w-3/12 bg-base-100 shadow-xl image-full">

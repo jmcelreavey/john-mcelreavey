@@ -6,6 +6,7 @@
 .pnp.js
 /.pnpm-store
 /.swc
+/.history
 
 # testing
 /coverage
